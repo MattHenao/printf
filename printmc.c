@@ -10,12 +10,12 @@
  * Return: 0?
  */
 
-int _printf(const char *format, ...);
+int _printf(const char *format, ...)
 {
 	int i;
 
 	for (i = 0; format[i] != '\0'; i++)
 	;
-	write(1, c, i);
+	write(1, format, i);
 	return (0);
 }
