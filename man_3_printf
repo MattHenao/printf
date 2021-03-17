@@ -1,0 +1,23 @@
+. TH    _printf () "2021-16-03" "Página del manual de _printf ()"
+. SH NAME
+_printf ().
+. SH SINOPSIS
+. B  _printf ()
+. RB {| OBJETO |}
+. RB [| OPCIONES |]
+. SH DESCRIPCION
+_printf () Imprime ARGUMENTOS de acuerdo con los datos ingresados
+. FORMATO B
+O ejecutar de acuerdo con
+. OPCIONES B
+. OPCIONES SH
+. RS
+. nf
+	- c imprime un solo carácter
+	- s imprime una cadena de caracteres
+	-% iniciar una especificación de formato
+	- d imprime un decimal
+	- i imprime un entero
+. RE
+. SH AUTOR
+. I Mateo Henao  y  David Cera
