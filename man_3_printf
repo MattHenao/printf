@@ -1,23 +1,47 @@
-. TH    _printf () "2021-16-03" "Página del manual de _printf ()"
+. TH    _printf () "2021-16-03" "_Printf() manual page "
 . SH NAME
 _printf ().
-. SH SINOPSIS
+. SH SYNOPSIS
 . B  _printf ()
 . RB {| OBJETO |}
 . RB [| OPCIONES |]
 . SH DESCRIPCION
-_printf () Imprime ARGUMENTOS de acuerdo con los datos ingresados
+_printf () Print ARGUMENTS according to the data entered
 . FORMATO B
-O ejecutar de acuerdo con
+\"     double quote
+    \\\     backslash
+    \\a     alert (BEL)
+    \\b     backspace
+    \\c     produce no further output
+    \\e     escape
+    \\f     form feed
+    \\n     new line
+    \\r     carriage return
+    \\t     horizontal tab
+	\\NNN   byte with octal value NNN (1 to 3 digits)
+    \\xHH   byte with hexadecimal value HH (1 to 2 digits)
+    \\uHHHH Unicode (ISO/IEC 10646) character with hex value HHHH (4 digits)
+    \\UHHHHHHHH Unicode character with hex value HHHHHHHH (8 digits)
+    %%     a single %
+    %b     ARGUMENT as a string with '\' escapes interpreted, except that octal escapes are of the form \0 or \0NNN
+O execute according to
 . OPCIONES B
-. OPCIONES SH
+. OPTIONS SH
 . RS
 . nf
-	- c imprime un solo carácter
-	- s imprime una cadena de caracteres
-	-% iniciar una especificación de formato
-	- d imprime un decimal
-	- i imprime un entero
+    -% start a format specification
+    - c Character When used with functions, specifies a single-byte character; when used with functions, specifies a wide character.printfwprintf
+    - C Character When used with functions, specifies a wide character; when used with functions, specifies a single-byte character.printfwprintf
+    - d Signed Decimal Integer Integer.
+    - i Signed decimal integer integer.
+    - or Unsigned Octal Integer Integer.
+    - or Unsigned Decimal Integer Integer.
+    - x Unsigned hexadecimal integer integer; uses ".abcdef
+    - X Unsigned hexadecimal integer integer; uses "." Abcdef
 . RE
-. SH AUTOR
+. SH AUTHOR
 . I Mateo Henao  y  David Cera
+SEE ALSO
+       _printf(3)
+       The full documentation for printf is maintained as a Texinfo manual.  If the info and printf programs are properly installed at your site, the command
+              info coreutils '_printf invocation'
