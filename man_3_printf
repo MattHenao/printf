@@ -44,4 +44,4 @@ O execute according to
 SEE ALSO
        _printf(3)
        The full documentation for printf is maintained as a Texinfo manual.  If the info and printf programs are properly installed at your site, the command
-              info coreutils '_printf invocation'
+	      info coreutils '_printf invocation'
