@@ -1,12 +1,12 @@
 # _Printf
    Function that prints text and data type specifiers
 ### Funtions
-    * func_c.c 
+    * func_c.c
 	- is the function print character if especifier is c
     * func_s.c
 	- Is the function print text if especifier is s
 ## Use
-    * You enter a text that will be printed by screen, to this text you can add specifiers 
+    * You enter a text that will be printed by screen, to this text you can add specifiers
     * to enter new data, data that can be stored with previousd or new
     * To add the new items that will be printed you have to write a specifier that is called by typing the character %
 ### Examples
@@ -23,7 +23,7 @@
     * or Unsigned Decimal Integer Integer.
     * x Unsigned hexadecimal integer integer; uses ".abcdef
     * X Unsigned hexadecimal integer integer; uses "." Abcdef
-## REQUIREMENTS 
+## REQUIREMENTS
     *  Authorized functions and macros
 	* write (man 2 write)
 	* malloc (man 3 malloc)
