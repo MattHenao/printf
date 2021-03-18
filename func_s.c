@@ -9,13 +9,12 @@
 void func_s(va_list li)
 {
 	char *p;
+	int a;
 
 	p = va_arg(li, char *);
 
-	int i;
-
-	for (i = 0; p[i] != '\0'; i++)
+	for (a = 0; p[a] != '\0'; a++)
 	{
-		write(1, &p[i], 1);
+		write(1, &p[a], 1);
 	}
 }
