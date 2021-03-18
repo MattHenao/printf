@@ -1,5 +1,3 @@
-#include <stdlib.h>
-#include <unistd.h>
 #include "holberton.h"
 
 /**
@@ -13,9 +11,28 @@
 int _printf(const char *format, ...)
 {
 	int i;
+	va_list li;
+
+	va_start(li, format);
 
 	for (i = 0; format[i] != '\0'; i++)
-	;
-	write(1, format, i);
+	{
+		if (format[i] != '%')
+		{
+			write(1, &format, 1);
+		}
+		else
+		{
+			if (format[i + 1] == 's')
+			{
+				func_s(li);
+			}
+			else if (format[i + 1] == 'c')
+			{
+				func_c(li);
+			}
+			i++;
+		}
+	}
 	return (0);
 }
