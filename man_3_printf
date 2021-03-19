@@ -25,7 +25,10 @@ _printf () Print ARGUMENTS according to the data entered
     %%     a single %
     %b     ARGUMENT as a string with '\' escapes interpreted, except that octal escapes are of the form \0 or \0NNN
 O execute according to
-. OPCIONES B
+. EXAMPLES
+	$ _printf ("text %specifier");
+   	$ _printf ("hello worl%c", 'd');
+	$ vagrant@vagrant-ubuntu-trusty-64:~/printf$ hello world
 . OPTIONS SH
 . RS
 . nf
