@@ -10,7 +10,7 @@
 
 int _printf(const char *format, ...)
 {
-	int i;
+	int i, count = 0;
 	va_list li;
 
 	va_start(li, format);
@@ -20,19 +20,24 @@ int _printf(const char *format, ...)
 		if (format[i] != '%')
 		{
 			write(1, &format[i], 1);
+			count++;
 		}
 		else
 		{
 			if (format[i + 1] == 's')
 			{
-				func_s(li);
+				count += func_s(li);
 			}
 			else if (format[i + 1] == 'c')
 			{
-				func_c(li);
+				count += func_c(li);
+			}
+			else if (format[i + 1] == '%')
+			{
+				count += func_por();
 			}
 			i++;
 		}
 	}
-	return (0);
+	return (count);
 }
