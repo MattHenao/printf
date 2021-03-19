@@ -8,7 +8,8 @@
 
 int _printf(const char *format, ...);
 int main(void);
-void func_s(va_list li);
-void func_c(va_list li);
+int func_s(va_list li);
+int func_c(va_list li);
+int func_por(void);
 
 #endif
